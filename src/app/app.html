@@ -5,4 +5,6 @@
 </main>
 
 <app-footer />
-<app-custom-cursor />
+@if (!cursorService.isTouchDevice) {
+  <app-custom-cursor />
+}

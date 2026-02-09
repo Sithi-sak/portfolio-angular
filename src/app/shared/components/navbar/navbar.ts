@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CursorSnap } from '../../directives/cursor-snap';
 import { Theme } from '../../../core/services/theme';
@@ -11,4 +11,14 @@ import { Theme } from '../../../core/services/theme';
 })
 export class Navbar {
   themeService = inject(Theme);
+
+  isMenuOpen = signal(false);
+
+  toggleMenu() {
+    this.isMenuOpen.update((open) => !open);
+  }
+
+  closeMenu() {
+    this.isMenuOpen.set(false);
+  }
 }

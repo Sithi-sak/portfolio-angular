@@ -87,6 +87,13 @@ a:hover {
   transition: scale var(--transition-duration) var(--transition-curve);
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: var(--text-lg);
+}
+
 @media (max-width: 1280px) {
   nav {
     width: 70vw;
@@ -96,5 +103,46 @@ a:hover {
 @media (max-width: 768px) {
   nav {
     width: 90vw;
+  }
+
+  .hamburger {
+    display: block;
+    color: var(--foreground);
+    transition: transform 0.3s ease;
+  }
+
+  nav.menu-open .hamburger {
+    transform: rotate(90deg);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-top: none;
+    backdrop-filter: blur(var(--blur-xl));
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s var(--transition-curve);
+  }
+
+  .nav-links.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
   }
 }

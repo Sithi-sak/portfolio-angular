@@ -147,6 +147,18 @@ ul {
   list-style: none;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+@media (hover: none) {
+  * {
+    cursor: auto !important;
+  }
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 105%;

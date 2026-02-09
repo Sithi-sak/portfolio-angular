@@ -4,6 +4,7 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class Cursor {
+  isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   //   mouse position
   position = signal({ x: 0, y: 0 });
 
