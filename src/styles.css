@@ -88,6 +88,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
   margin: 0;
   padding: 0;
   cursor: none;
@@ -99,7 +100,9 @@
     stroke 0.5s var(--transition-curve);
 }
 
+button,
 a {
+  touch-action: manipulation;
   text-decoration: none;
 }
 
