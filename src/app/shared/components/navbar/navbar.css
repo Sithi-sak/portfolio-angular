@@ -9,12 +9,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  margin-top: 12px;
+  margin-top: 1rem;
   padding: 0 2rem;
-  background: color-mix(in oklab, var(--bg-color) 50%, transparent);
-  border: 1px solid #e5e7eb;
+  background: color-mix(in oklab, inherit 50%, transparent);
+  border: 1px solid var(--border);
   position: sticky;
-  top: 12px;
+  top: 1rem;
   z-index: 1000;
   backdrop-filter: blur(var(--blur-xl));
 }
@@ -27,7 +27,7 @@ nav {
 
 ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 a {
@@ -37,7 +37,7 @@ a {
   font-size: var(--text-sm);
   line-height: var(--text-sm--line-height);
   transition: color var(--transition-duration) var(--transition-curve);
-  cursor: url('/assets/link.png'), auto;
+  /* cursor: url('/assets/link.png'), auto; */
 }
 
 a:hover {
@@ -46,6 +46,21 @@ a:hover {
 
 .active-link {
   color: var(--primary-color);
+}
+
+.theme-toggle {
+  color: var(--foreground);
+  background: none;
+  border: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
 }
 
 .social-links {
@@ -59,22 +74,25 @@ a:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: background-color var(--transition-duration) var(--transition-curve);
   text-decoration: none;
-  cursor: url('/assets/link.png'), auto;
-}
-
-.social-icon-bg:hover {
-  background-color: #e5e7eb;
 }
 
 .social-icon {
+  fill: var(--foreground);
   width: 24px;
   height: 24px;
-  cursor: url('/assets/link.png'), auto;
+  /* cursor: url('/assets/link.png'), auto; */
   transition: scale var(--transition-duration) var(--transition-curve);
 }
 
-.social-icon:hover {
-  scale: 1.05;
+@media (max-width: 1280px) {
+  nav {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 90vw;
+  }
 }

@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CursorSnap } from '../../directives/cursor-snap';
+import { Theme } from '../../../core/services/theme';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, RouterLinkActive, RouterLink],
+  imports: [RouterLink, RouterLinkActive, CursorSnap],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar {}
+export class Navbar {
+  themeService = inject(Theme);
+}

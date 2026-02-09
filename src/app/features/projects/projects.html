@@ -1,3 +1,19 @@
-<section>
-  <h1 class="title">Projects</h1>
-</section>
+<div class="container-wrapper">
+  <section>
+    <div class="header">
+      <h1 class="title">Projects</h1>
+      <h2>A collection of all my personal projects.</h2>
+    </div>
+  </section>
+  <div class="project-grid">
+    @for (item of projects; track item.id) {
+      <a [routerLink]="['/projects', item.id]" class="project-card">
+        <h3 class="project-card__title">{{ item.title }}</h3>
+        <div class="project-card__content">
+          <p>{{ item.description }}</p>
+          <p>Learn more...</p>
+        </div>
+      </a>
+    }
+  </div>
+</div>

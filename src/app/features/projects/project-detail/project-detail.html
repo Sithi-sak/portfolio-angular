@@ -1,0 +1,62 @@
+<a class="back-btn" [routerLink]="['/projects']" appCursorSnap>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="lucide lucide-arrow-left-icon lucide-arrow-left"
+  >
+    <path d="m12 19-7-7 7-7" />
+    <path d="M19 12H5" />
+  </svg>
+  Back to Projects</a
+>
+<section class="project-content">
+  @if (project(); as p) {
+    <div class="project-content__header">
+      <h1>{{ p.title }}</h1>
+      <span class="source-link"
+        ><a [href]="p.github" target="_blank" rel="noopener" appCursorSnap
+          >github
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-external-link-icon lucide-external-link"
+          >
+            <path d="M15 3h6v6" />
+            <path d="M10 14 21 3" />
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg></a
+      ></span>
+    </div>
+
+    <p>{{ p.description }}</p>
+    <p>{{ p.content }}</p>
+  } @else {
+    <p>Project not found.</p>
+  }
+</section>
+<section class="badges">
+  <h2>Techstack</h2>
+
+  @if (project(); as p) {
+    <div class="badge-container">
+      @for (item of p.techStack; track item) {
+        <span class="badge">
+          {{ item }}
+        </span>
+      }
+    </div>
+  }
+</section>

@@ -1,0 +1,60 @@
+.cursor-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition:
+    transform 0.05s linear,
+    width 0.3s var(--transition-curve),
+    height 0.3s var(--transition-curve),
+    border-radius 0.3s ease;
+  will-change: transform, width, height;
+}
+
+.cursor-main[style*='border-radius: 50%'] {
+  --ring-color: var(--primary-color);
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(1.5px + var(--tw-ring-offset-width)) var(--ring-color);
+  background-color: color-mix(in oklab, var(--primary-color) 0%, transparent);
+}
+
+.corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.cursor-main.is-snapped .corner {
+  opacity: 1;
+}
+
+.top-left {
+  top: -4px;
+  left: -4px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.top-right {
+  top: -4px;
+  right: -4px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottom-left {
+  bottom: -4px;
+  left: -4px;
+  border-right: none;
+  border-top: none;
+}
+
+.bottom-right {
+  bottom: -4px;
+  right: -4px;
+  border-left: none;
+  border-top: none;
+}

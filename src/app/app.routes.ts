@@ -1,4 +1,10 @@
 import { Routes } from '@angular/router';
+import { ProjectDetail } from './features/projects/project-detail/project-detail';
+import { Projects } from './features/projects/projects';
+import { About } from './features/about/about';
+import { Skills } from './features/skills/skills';
+import { Experience } from './features/experience/experience';
+import { Education } from './features/education/education';
 
 export const routes: Routes = [
   {
@@ -8,22 +14,26 @@ export const routes: Routes = [
   },
   {
     path: 'about',
-    loadComponent: () => import('./features/about/about').then((m) => m.About),
+    component: About,
   },
   {
     path: 'projects',
-    loadComponent: () => import('./features/projects/projects').then((m) => m.Projects),
+    component: Projects,
+  },
+  {
+    path: 'projects/:id',
+    component: ProjectDetail,
   },
   {
     path: 'skills',
-    loadComponent: () => import('./features/skills/skills').then((m) => m.Skills),
+    component: Skills,
   },
   {
     path: 'experience',
-    loadComponent: () => import('./features/experience/experience').then((m) => m.Experience),
+    component: Experience,
   },
   {
     path: 'education',
-    loadComponent: () => import('./features/education/education').then((m) => m.Education),
+    component: Education,
   },
 ];

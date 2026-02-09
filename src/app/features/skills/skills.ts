@@ -12,67 +12,67 @@ export class Skills {
   protected readonly techStack = signal<Skill[]>([
     {
       name: 'HTML',
-      icon: 'assets/icons/html5.svg',
+      icon: 'assets/devicons/html5-original.svg',
       level: 'Advanced',
     },
     {
       name: 'CSS',
-      icon: 'assets/icons/css.svg',
+      icon: 'assets/devicons/css3-original.svg',
       level: 'Advanced',
     },
     {
       name: 'Javascript',
-      icon: 'assets/icons/javascript.svg',
+      icon: 'assets/devicons/javascript-original.svg',
       level: 'Intermediate',
     },
     {
       name: 'Angular',
-      icon: 'assets/icons/angular.svg',
+      icon: 'assets/devicons/angular-original.svg',
       level: 'Beginner/Learning',
     },
     {
       name: 'Typescript',
-      icon: 'assets/icons/typescript.svg',
+      icon: 'assets/devicons/typescript-original.svg',
       level: 'Intermediate',
     },
     {
       name: 'Tailwind CSS',
-      icon: 'assets/icons/tailwindcss.svg',
+      icon: 'assets/devicons/tailwindcss-original.svg',
       level: 'Intermediate',
     },
     {
       name: 'shadcn/ui',
-      icon: 'assets/icons/shadcnui.svg',
+      icon: 'assets/devicons/shadcnui.svg',
       level: 'Beginner',
     },
     {
       name: 'Node.js',
-      icon: 'assets/icons/nodedotjs.svg',
+      icon: 'assets/devicons/nodejs-original.svg',
       level: 'Beginner',
     },
     {
       name: 'SQLite',
-      icon: 'assets/icons/sqlite.svg',
+      icon: 'assets/devicons/sqlite-original.svg',
       level: 'Intermediate',
     },
     {
       name: 'PostgreSQL',
-      icon: 'assets/icons/postgresql.svg',
+      icon: 'assets/devicons/postgresql-original.svg',
       level: 'Intermediate',
     },
     {
       name: 'Git',
-      icon: 'assets/icons/git.svg',
+      icon: 'assets/devicons/git-original.svg',
       level: 'Intermediate',
     },
     {
       name: 'Supabase',
-      icon: 'assets/icons/supabase.svg',
+      icon: 'assets/devicons/supabase-original.svg',
       level: 'Beginner',
     },
     {
       name: 'Linux',
-      icon: 'assets/icons/linux.svg',
+      icon: 'assets/devicons/linux-original.svg',
       level: 'Advanced',
     },
   ]);
