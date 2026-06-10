@@ -26,8 +26,8 @@ export class Skills {
       level: 'Intermediate',
     },
     {
-      name: 'Angular',
-      icon: 'assets/devicons/angular-original.svg',
+      name: 'Vue',
+      icon: 'assets/devicons/vue-original.svg',
       level: 'Beginner/Learning',
     },
     {
