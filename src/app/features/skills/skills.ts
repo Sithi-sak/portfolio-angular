@@ -27,7 +27,7 @@ export class Skills {
     },
     {
       name: 'Vue',
-      icon: 'assets/devicons/vue-original.svg',
+      icon: 'assets/devicons/vuejs-original.svg',
       level: 'Beginner/Learning',
     },
     {
